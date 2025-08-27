@@ -23,7 +23,7 @@ struct BigPicturePlayerView: View {
 
                     if isControlsVisible {
                         playbackControlsView(geometry: geometry)
-                            .transition(.opacity)
+                            .transition(.move(edge: .bottom).combined(with: .opacity))
                     }
 
                     Spacer()
@@ -33,8 +33,10 @@ struct BigPicturePlayerView: View {
             .onTapGesture {
                 toggleControlsVisibility()
             }
+            .transition(.opacity.combined(with: .scale))
+            .animation(.easeInOut(duration: 0.3), value: isPresented)
         }
-        .onChange(of: viewModel.currentSong?.id) { oldValue, newValue in
+        .onChange(of: viewModel.currentSong?.id) { _, _ in
             DispatchQueue.main.async {
                 controlsTimer?.invalidate()
                 controlsTimer = nil
@@ -65,7 +67,6 @@ struct BigPicturePlayerView: View {
     }
 
     // MARK: - Background
-
     private var backgroundView: some View {
         Group {
             if let currentSong = viewModel.currentSong, let image = currentSong.albumImage {
@@ -85,7 +86,6 @@ struct BigPicturePlayerView: View {
     }
 
     // MARK: - Header
-
     private var headerView: some View {
         HStack {
             Button(action: {
@@ -102,17 +102,6 @@ struct BigPicturePlayerView: View {
 
             Spacer()
 
-            VStack {
-                Text("Modo Pantalla Completa")
-                    .font(.system(size: 16))
-                    .foregroundColor(.white.opacity(0.8))
-                Text("ID: \(viewModel.currentSong?.id.uuidString.prefix(8) ?? "nil")")
-                    .font(.system(size: 10))
-                    .foregroundColor(.red.opacity(0.8))
-            }
-
-            Spacer()
-
             Image(systemName: "chevron.down.circle.fill")
                 .font(.system(size: 28))
                 .opacity(0)
@@ -122,7 +111,6 @@ struct BigPicturePlayerView: View {
     }
 
     // MARK: - Album Art & Info
-
     private func albumArtAndInfoView(geometry: GeometryProxy) -> some View {
         Group {
             if let currentSong = viewModel.currentSong {
@@ -201,9 +189,9 @@ struct BigPicturePlayerView: View {
     }
 
     // MARK: - Playback Controls
-
     private func playbackControlsView(geometry: GeometryProxy) -> some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 10) {
+            // Barra de progreso
             CustomProgressBarView(
                 progress: $progress,
                 isSeeking: $isSeeking,
@@ -214,6 +202,19 @@ struct BigPicturePlayerView: View {
             .frame(width: geometry.size.width * 0.6)
             .frame(height: 6)
 
+            // Tiempos
+            HStack {
+                Text(viewModel.formatTime(viewModel.currentTime))
+                    .font(.system(size: 12))
+                    .foregroundColor(.white.opacity(0.8))
+                Spacer()
+                Text(viewModel.formatTime(viewModel.duration))
+                    .font(.system(size: 12))
+                    .foregroundColor(.white.opacity(0.8))
+            }
+            .frame(width: geometry.size.width * 0.6)
+
+            // Controles
             HStack(spacing: 30) {
                 volumeControl
                 navigationControls
@@ -229,9 +230,14 @@ struct BigPicturePlayerView: View {
                 .font(.system(size: 20))
                 .foregroundColor(.white)
 
-            Slider(value: $viewModel.volume, in: 0...1)
-                .frame(width: 80)
-                .accentColor(.white)
+            Slider(value: Binding(
+                get: { Double(viewModel.volume) },
+                set: { newValue in
+                    viewModel.setVolume(Float(newValue))
+                }
+            ), in: 0...1)
+            .frame(width: 80)
+            .accentColor(.white)
         }
     }
 
@@ -286,7 +292,6 @@ struct BigPicturePlayerView: View {
     }
 
     // MARK: - Utils
-
     private func toggleControlsVisibility() {
         withAnimation(.easeInOut(duration: 0.3)) {
             isControlsVisible.toggle()
@@ -317,7 +322,6 @@ struct BigPicturePlayerView: View {
         }
     }
 
-    // MARK: - Sanitize Image
     private func sanitized(image: NSImage) -> NSImage {
         guard let tiff = image.tiffRepresentation,
               let bitmap = NSBitmapImageRep(data: tiff) else { return image }
@@ -328,7 +332,6 @@ struct BigPicturePlayerView: View {
 }
 
 // MARK: - Custom Progress Bar
-
 struct CustomProgressBarView: View {
     @Binding var progress: Double
     @Binding var isSeeking: Bool
