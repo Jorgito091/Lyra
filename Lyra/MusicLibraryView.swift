@@ -2,6 +2,20 @@ import SwiftUI
 import AppKit
 import UniformTypeIdentifiers
 
+// Delegate personalizado para manejar el cierre de la ventana
+class BigPictureWindowDelegate: NSObject, NSWindowDelegate {
+    private let onClose: () -> Void
+    
+    init(onClose: @escaping () -> Void) {
+        self.onClose = onClose
+        super.init()
+    }
+    
+    func windowWillClose(_ notification: Notification) {
+        onClose()
+    }
+}
+
 struct MusicLibraryView: View {
     @StateObject private var viewModel = MusicLibraryViewModel()
     @State private var showingPlaylistCreator = false
@@ -12,6 +26,10 @@ struct MusicLibraryView: View {
     @State private var showingImportDialog = false
     @State private var droppedURLs: [URL] = []
     @State private var isDraggingOver = false
+    @State private var showingBigPicture = false
+    @State private var bigPictureTransition = false
+    @State private var bigPictureWindow: NSWindow? // Para la ventana personalizada
+    @State private var windowDelegate: BigPictureWindowDelegate? // Para retener el delegate
 
     var body: some View {
         ZStack {
@@ -34,6 +52,20 @@ struct MusicLibraryView: View {
                         TextField("Buscar…", text: $viewModel.searchText)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding(.horizontal)
+
+                        // Botón de pantalla completa
+                        if viewModel.currentSong != nil {
+                            Button(action: {
+                                print("🎵 Botón pantalla completa presionado")
+                                print("🎵 Current Song antes de abrir: \(viewModel.currentSong?.title ?? "nil")")
+                                openBigPictureWindow()
+                            }) {
+                                Image(systemName: "arrow.up.left.and.arrow.down.right")
+                                    .font(.title2)
+                                    .foregroundColor(.accentColor)
+                            }
+                            .help("Modo pantalla completa")
+                        }
 
                         Button(action: { showingAddSong = true }) {
                             Image(systemName: "plus.circle.fill")
@@ -68,6 +100,7 @@ struct MusicLibraryView: View {
                         onDoubleClick: { song in viewModel.playSong(song) },
                         onEditAlbumArt: { song in selectAlbumArt(for: song) }
                     )
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
 
                     Divider()
 
@@ -83,11 +116,11 @@ struct MusicLibraryView: View {
                         .transition(.move(edge: .bottom))
                     }
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            
-            // Manejador de teclado
-            KeyboardEventHandler(viewModel: viewModel)
-                .frame(width: 0, height: 0)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color(NSColor.windowBackgroundColor))
+            .opacity(bigPictureTransition ? 0 : 1)
             
             // Overlay de drag & drop
             if isDraggingOver {
@@ -147,6 +180,12 @@ struct MusicLibraryView: View {
                 }
             }
         }
+        .onDisappear {
+            // Cerrar la ventana de pantalla completa si está abierta
+            bigPictureWindow?.close()
+            bigPictureWindow = nil
+            windowDelegate = nil
+        }
     }
 
     // Canciones actuales según playlist
@@ -156,6 +195,65 @@ struct MusicLibraryView: View {
         } else {
             return viewModel.filteredSongs()
         }
+    }
+
+    // MARK: - Pantalla completa con ventana personalizada
+    private func openBigPictureWindow() {
+        // Cerrar ventana anterior si existe
+        bigPictureWindow?.close()
+        
+        // Crear nueva ventana
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 1200, height: 800),
+            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+            backing: .buffered,
+            defer: false
+        )
+        
+        window.title = "Reproductor - Pantalla Completa"
+        window.center()
+        window.isReleasedWhenClosed = false
+        window.titlebarAppearsTransparent = true
+        window.titleVisibility = .hidden
+        
+        // Crear el contenido de la ventana
+        let bigPictureView = BigPicturePlayerView(
+            viewModel: viewModel,
+            isPresented: Binding(
+                get: { true },
+                set: { _ in
+                    // Cuando BigPicturePlayerView quiera cerrar la ventana
+                    window.close()
+                }
+            )
+        )
+        
+        window.contentView = NSHostingView(rootView: bigPictureView)
+        
+        // Configurar el delegate de la ventana para limpiar la referencia al cerrar
+        let delegate = BigPictureWindowDelegate {
+            DispatchQueue.main.async {
+                self.bigPictureWindow = nil
+                self.windowDelegate = nil
+            }
+        }
+        window.delegate = delegate
+        self.windowDelegate = delegate
+        
+        // Mostrar la ventana
+        window.makeKeyAndOrderFront(nil)
+        
+        // Configurar el botón de cerrar
+        if let closeButton = window.standardWindowButton(.closeButton) {
+            closeButton.target = nil
+            closeButton.action = nil
+        }
+        
+        // Guardar referencia
+        bigPictureWindow = window
+        
+        // Opcional: Hacer que la ventana entre en pantalla completa automáticamente
+        // window.toggleFullScreen(nil)
     }
 
     // Seleccionar carátula desde la lista
@@ -188,17 +286,14 @@ struct MusicLibraryView: View {
         for provider in providers {
             group.enter()
             
-            // Método mejorado para manejar permisos de sandbox
             provider.loadItem(forTypeIdentifier: UTType.fileURL.identifier, options: nil) { (item, error) in
                 defer { group.leave() }
                 
                 if let securityScopedURL = item as? URL {
-                    // Intentar acceso con seguridad de scope
                     if securityScopedURL.startAccessingSecurityScopedResource() {
                         defer { securityScopedURL.stopAccessingSecurityScopedResource() }
                         
                         if self.isAudioFile(securityScopedURL) {
-                            // Copiar el archivo a la carpeta de Lyra
                             if let localURL = self.copyToLyraFolder(securityScopedURL) {
                                 DispatchQueue.main.async {
                                     loadedURLs.append(localURL)
@@ -219,7 +314,6 @@ struct MusicLibraryView: View {
         group.notify(queue: .main) {
             if !loadedURLs.isEmpty {
                 self.droppedURLs = loadedURLs
-                // Usar AddSongView para los archivos arrastrados
                 self.showingAddSong = true
             }
         }
@@ -235,14 +329,10 @@ struct MusicLibraryView: View {
     
     private func copyToLyraFolder(_ sourceURL: URL) -> URL? {
         guard let destinationFolder = viewModel.lyraFolder() else { return nil }
-        
         let destinationURL = destinationFolder.appendingPathComponent(sourceURL.lastPathComponent)
-        
-        // Si ya existe, no copiar
         if FileManager.default.fileExists(atPath: destinationURL.path) {
             return destinationURL
         }
-        
         do {
             try FileManager.default.copyItem(at: sourceURL, to: destinationURL)
             return destinationURL
@@ -256,5 +346,6 @@ struct MusicLibraryView: View {
 struct MusicLibraryView_Previews: PreviewProvider {
     static var previews: some View {
         MusicLibraryView()
+            .frame(width: 1200, height: 800)
     }
 }

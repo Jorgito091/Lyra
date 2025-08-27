@@ -7,7 +7,7 @@ struct KeyboardEventHandler: NSViewRepresentable {
     class KeyView: NSView {
         weak var viewModel: MusicLibraryViewModel?
         
-        override var acceptsFirstResponder: Bool { return true }
+        override var acceptsFirstResponder: Bool { true }
         
         override func viewDidMoveToWindow() {
             super.viewDidMoveToWindow()
@@ -33,12 +33,17 @@ struct KeyboardEventHandler: NSViewRepresentable {
                 viewModel.setVolume(min(viewModel.volume + 0.1, 1.0))
             case 125: // Flecha abajo - Bajar volumen
                 viewModel.setVolume(max(viewModel.volume - 0.1, 0.0))
+            case 3: // Tecla F con Command - Fullscreen
+                if event.modifierFlags.contains(.command) {
+                    NotificationCenter.default.post(name: .init("ToggleBigPictureMode"), object: nil)
+                }
             default:
                 super.keyDown(with: event)
             }
         }
     }
     
+    // ✅ Estas funciones deben estar en la struct, no en la clase interna
     func makeNSView(context: Context) -> KeyView {
         let view = KeyView()
         view.viewModel = viewModel
