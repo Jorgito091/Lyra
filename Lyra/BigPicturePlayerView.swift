@@ -74,7 +74,7 @@ struct BigPicturePlayerView: View {
                     Image(nsImage: sanitized(image: image))
                         .resizable()
                         .scaledToFill()
-                        .frame(width: geo.size.width, height: geo.size.height)
+                        .frame(width: max(1, geo.size.width), height: max(1, geo.size.height)) // Robustez aquí
                         .clipped()
                         .blur(radius: 20)
                         .overlay(Color.black.opacity(0.6))
@@ -98,7 +98,7 @@ struct BigPicturePlayerView: View {
                     .foregroundColor(.white)
             }
             .buttonStyle(PlainButtonStyle())
-            .onTapGesture { } // evitar propagación
+            .onTapGesture { }
 
             Spacer()
 
@@ -120,8 +120,8 @@ struct BigPicturePlayerView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(
-                                maxWidth: min(geometry.size.width * 0.4, 400),
-                                maxHeight: min(geometry.size.height * 0.4, 400)
+                                maxWidth: max(1, min(geometry.size.width * 0.4, 400)),
+                                maxHeight: max(1, min(geometry.size.height * 0.4, 400))
                             )
                             .cornerRadius(12)
                             .shadow(radius: 20)
@@ -129,8 +129,8 @@ struct BigPicturePlayerView: View {
                         RoundedRectangle(cornerRadius: 12)
                             .fill(Color.gray.opacity(0.3))
                             .frame(
-                                width: min(geometry.size.width * 0.4, 400),
-                                height: min(geometry.size.height * 0.4, 400)
+                                width: max(1, min(geometry.size.width * 0.4, 400)),
+                                height: max(1, min(geometry.size.height * 0.4, 400))
                             )
                             .overlay(
                                 Image(systemName: "music.note")
@@ -166,8 +166,8 @@ struct BigPicturePlayerView: View {
                     RoundedRectangle(cornerRadius: 12)
                         .fill(Color.red.opacity(0.3))
                         .frame(
-                            width: min(geometry.size.width * 0.4, 400),
-                            height: min(geometry.size.height * 0.4, 400)
+                            width: max(1, min(geometry.size.width * 0.4, 400)),
+                            height: max(1, min(geometry.size.height * 0.4, 400))
                         )
                         .overlay(
                             VStack {
@@ -196,10 +196,10 @@ struct BigPicturePlayerView: View {
                 progress: $progress,
                 isSeeking: $isSeeking,
                 onSeek: { newProgress in
-                    viewModel.seek(to: newProgress * viewModel.duration)
+                    viewModel.seek(to: newProgress * (viewModel.duration.isFinite && viewModel.duration > 0 ? viewModel.duration : 1))
                 }
             )
-            .frame(width: geometry.size.width * 0.6)
+            .frame(width: max(1, geometry.size.width * 0.6)) // Robustez aquí
             .frame(height: 6)
 
             // Tiempos
@@ -212,7 +212,7 @@ struct BigPicturePlayerView: View {
                     .font(.system(size: 12))
                     .foregroundColor(.white.opacity(0.8))
             }
-            .frame(width: geometry.size.width * 0.6)
+            .frame(width: max(1, geometry.size.width * 0.6)) // Robustez aquí
 
             // Controles
             HStack(spacing: 30) {
@@ -221,7 +221,7 @@ struct BigPicturePlayerView: View {
                 playbackModeControls
             }
         }
-        .onTapGesture { } // prevenir propagación
+        .onTapGesture { }
     }
 
     private var volumeControl: some View {
@@ -316,7 +316,7 @@ struct BigPicturePlayerView: View {
             guard viewModel.currentSong != nil else { timer.invalidate(); return }
             if !isSeeking && viewModel.duration > 0 {
                 DispatchQueue.main.async {
-                    self.progress = self.viewModel.currentTime / self.viewModel.duration
+                    self.progress = self.viewModel.duration.isFinite && self.viewModel.duration > 0 ? (self.viewModel.currentTime / self.viewModel.duration) : 0
                 }
             }
         }
@@ -339,6 +339,7 @@ struct CustomProgressBarView: View {
 
     var body: some View {
         GeometryReader { geometry in
+            let safeWidth = geometry.size.width.isFinite && geometry.size.width > 0 ? geometry.size.width : 1
             ZStack(alignment: .leading) {
                 Rectangle()
                     .fill(Color.white.opacity(0.3))
@@ -347,18 +348,18 @@ struct CustomProgressBarView: View {
 
                 Rectangle()
                     .fill(Color.white)
-                    .frame(width: geometry.size.width * CGFloat(progress), height: 6)
+                    .frame(width: safeWidth * CGFloat(progress.isFinite ? progress : 0), height: 6)
                     .cornerRadius(3)
             }
             .gesture(
                 DragGesture(minimumDistance: 0)
                     .onChanged { value in
                         isSeeking = true
-                        let newProgress = min(max(0, Double(value.location.x / geometry.size.width)), 1)
+                        let newProgress = min(max(0, Double(value.location.x / safeWidth)), 1)
                         progress = newProgress
                     }
                     .onEnded { value in
-                        let newProgress = min(max(0, Double(value.location.x / geometry.size.width)), 1)
+                        let newProgress = min(max(0, Double(value.location.x / safeWidth)), 1)
                         onSeek(newProgress)
                         isSeeking = false
                     }
