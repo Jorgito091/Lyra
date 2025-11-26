@@ -12,7 +12,6 @@ struct LibraryView: View {
     @StateObject private var library = MusicLibraryManager.shared
     @StateObject private var audioPlayer = AudioPlayerManager.shared
     @State private var showingFilePicker = false
-    @State private var showingEditSheet = false
     @State private var selectedSong: Song?
     @State private var searchText = ""
     
@@ -60,7 +59,6 @@ struct LibraryView: View {
                                     
                                     Button {
                                         selectedSong = song
-                                        showingEditSheet = true
                                     } label: {
                                         Label("Edit", systemImage: "pencil")
                                     }
@@ -84,12 +82,8 @@ struct LibraryView: View {
             .sheet(isPresented: $showingFilePicker) {
                 DocumentPicker()
             }
-            .sheet(isPresented: $showingEditSheet) {
-                if let song = selectedSong {
-                    EditSongView(song: song)
-                }
-            } onDismiss: {
-                selectedSong = nil
+            .sheet(item: $selectedSong) { song in
+                EditSongView(song: song)
             }
         }
     }
