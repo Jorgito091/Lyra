@@ -96,6 +96,7 @@ class MusicLibraryManager: ObservableObject {
     
     func updateSong(_ song: Song) {
         if let index = songs.firstIndex(where: { $0.id == song.id }) {
+            objectWillChange.send()
             songs[index] = song
             saveData()
         }
@@ -132,6 +133,7 @@ class MusicLibraryManager: ObservableObject {
     
     func updatePlaylist(_ playlist: Playlist) {
         if let index = playlists.firstIndex(where: { $0.id == playlist.id }) {
+            objectWillChange.send()
             var updatedPlaylist = playlist
             updatedPlaylist.dateModified = Date()
             playlists[index] = updatedPlaylist

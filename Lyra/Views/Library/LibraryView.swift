@@ -88,6 +88,8 @@ struct LibraryView: View {
                 if let song = selectedSong {
                     EditSongView(song: song)
                 }
+            } onDismiss: {
+                selectedSong = nil
             }
         }
     }

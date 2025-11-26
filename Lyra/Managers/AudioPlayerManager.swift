@@ -27,6 +27,41 @@ class AudioPlayerManager: NSObject, ObservableObject {
         super.init()
         setupAudioSession()
         setupRemoteCommands()
+        setupNotifications()
+    }
+    
+    private func setupNotifications() {
+        // Handle audio session interruptions (e.g., phone calls)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleInterruption),
+            name: AVAudioSession.interruptionNotification,
+            object: AVAudioSession.sharedInstance()
+        )
+    }
+    
+    @objc private func handleInterruption(notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
+              let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
+            return
+        }
+        
+        switch type {
+        case .began:
+            // Interruption began, pause playback
+            pause()
+        case .ended:
+            // Interruption ended, resume if needed
+            if let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt {
+                let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
+                if options.contains(.shouldResume) {
+                    play()
+                }
+            }
+        @unknown default:
+            break
+        }
     }
     
     private func setupAudioSession() {
@@ -97,6 +132,14 @@ class AudioPlayerManager: NSObject, ObservableObject {
     }
     
     func play() {
+        // Ensure audio session is active before playing
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setActive(true)
+        } catch {
+            print("Failed to activate audio session: \(error.localizedDescription)")
+        }
+        
         player?.play()
         isPlaying = true
         startTimer()
