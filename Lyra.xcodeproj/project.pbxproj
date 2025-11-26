@@ -11,635 +11,347 @@
 		CAFC4B3E0D8C4F0EA3BBDAF5 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			E9E836B9B9CB4CAAAAE8B2F3 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			1A7843C411C04E69BA83C0D3 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			3BA938613DF1449E987BC156 /* MusicLibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLibraryManager.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			365CB488AADC4923ADEFB528 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			86A2B06C65FE49B19BB43495 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			C7D776CB535843FB94CA4DD0 /* PlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			D9BF2EE6EC724CE7979A8C2F /* PlaylistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			55FD887C393444F5AFA734DB /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			A01FC8A1104E4A9EB5578EF4 /* SongRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRowView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			08963DEE4B764ECDA5003A43 /* PlaylistRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistRowView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			8FF07F68107743BE9FCB9BFF /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			537F05CADC0143C697D8FB5B /* EditSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSongView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			138D7C04BDC04FE48C2F5639 /* CreatePlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaylistView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			CD6E3C28D1144614B9FBFE95 /* EditPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlaylistView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			597315D6BD2D4F23AD714919 /* AddSongsToPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSongsToPlaylistView.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			8B4D54723734455DB81C0D53 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			54E06D3799B3495DA66D21D4 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 	/* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4E2DDAA22ED6896200125508 /* Lyra */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = PBXFileSystemSynchronizedRootGroup;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			path = Lyra;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E2DDA9D2ED6896200125508 /* Frameworks */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = PBXFrameworksBuildPhase;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildActionMask = 2147483647;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			files = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		4E2DDA972ED6896200125508 = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = PBXGroup;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			children = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDAA22ED6896200125508 /* Lyra */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDAA12ED6896200125508 /* Products */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			sourceTree = "<group>";
 		};
 		4E2DDAA12ED6896200125508 /* Products */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = PBXGroup;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			children = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDAA02ED6896200125508 /* Lyra.app */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			name = Products;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		4E2DDA9F2ED6896200125508 /* Lyra */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = PBXNativeTarget;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildConfigurationList = 4E2DDAAB2ED6896300125508 /* Build configuration list for PBXNativeTarget "Lyra" */;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildPhases = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDA9C2ED6896200125508 /* Sources */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDA9D2ED6896200125508 /* Frameworks */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDA9E2ED6896200125508 /* Resources */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildRules = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			dependencies = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			fileSystemSynchronizedGroups = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDAA22ED6896200125508 /* Lyra */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			name = Lyra;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			packageProductDependencies = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			productName = Lyra;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			productReference = 4E2DDAA02ED6896200125508 /* Lyra.app */;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		4E2DDA982ED6896200125508 /* Project object */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = PBXProject;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			attributes = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				BuildIndependentTargetsInParallel = 1;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				LastSwiftUpdateCheck = 2610;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				LastUpgradeCheck = 2610;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				TargetAttributes = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 					4E2DDA9F2ED6896200125508 = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 						CreatedOnToolsVersion = 26.1.1;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 					};
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				};
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			};
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildConfigurationList = 4E2DDA9B2ED6896200125508 /* Build configuration list for PBXProject "Lyra" */;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			developmentRegion = en;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			hasScannedForEncodings = 0;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			knownRegions = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				en,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				Base,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			mainGroup = 4E2DDA972ED6896200125508;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			minimizedProjectReferenceProxies = 1;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			preferredProjectObjectVersion = 77;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			productRefGroup = 4E2DDAA12ED6896200125508 /* Products */;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			projectDirPath = "";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			projectRoot = "";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			targets = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDA9F2ED6896200125508 /* Lyra */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4E2DDA9E2ED6896200125508 /* Resources */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = PBXResourcesBuildPhase;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildActionMask = 2147483647;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			files = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E2DDA9C2ED6896200125508 /* Sources */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = PBXSourcesBuildPhase;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildActionMask = 2147483647;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			files = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		4E2DDAA92ED6896300125508 /* Debug */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = XCBuildConfiguration;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildSettings = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_ANALYZER_NONNULL = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_ENABLE_MODULES = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_ENABLE_OBJC_ARC = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_COMMA = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_EMPTY_BODY = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_INFINITE_RECURSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_INT_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				COPY_PHASE_STRIP = NO;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				DEVELOPMENT_TEAM = J5474Z4NGK;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ENABLE_TESTABILITY = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_C_LANGUAGE_STANDARD = gnu17;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_DYNAMIC_NO_PIC = NO;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_NO_COMMON_BLOCKS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_OPTIMIZATION_LEVEL = 0;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_PREPROCESSOR_DEFINITIONS = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 					"DEBUG=1",
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 					"$(inherited)",
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				MTL_FAST_MATH = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ONLY_ACTIVE_ARCH = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SDKROOT = iphoneos;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			};
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			name = Debug;
 		};
 		4E2DDAAA2ED6896300125508 /* Release */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = XCBuildConfiguration;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildSettings = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_ANALYZER_NONNULL = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_ENABLE_MODULES = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_ENABLE_OBJC_ARC = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_COMMA = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_EMPTY_BODY = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_INFINITE_RECURSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_INT_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				COPY_PHASE_STRIP = NO;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				DEVELOPMENT_TEAM = J5474Z4NGK;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ENABLE_NS_ASSERTIONS = NO;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_C_LANGUAGE_STANDARD = gnu17;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_NO_COMMON_BLOCKS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				MTL_ENABLE_DEBUG_INFO = NO;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				MTL_FAST_MATH = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SDKROOT = iphoneos;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_COMPILATION_MODE = wholemodule;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				VALIDATE_PRODUCT = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			};
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			name = Release;
 		};
 		4E2DDAAC2ED6896300125508 /* Debug */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = XCBuildConfiguration;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildSettings = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CODE_SIGN_STYLE = Automatic;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CURRENT_PROJECT_VERSION = 1;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				DEVELOPMENT_TEAM = J5474Z4NGK;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ENABLE_PREVIEWS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GENERATE_INFOPLIST_FILE = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UIBackgroundModes = audio;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Lyra needs access to your photo library to set custom cover art for songs and playlists";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				LD_RUNPATH_SEARCH_PATHS = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 					"$(inherited)",
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 					"@executable_path/Frameworks",
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				MARKETING_VERSION = 1.0;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				PRODUCT_BUNDLE_IDENTIFIER = l.Lyra;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_VERSION = 5.0;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				TARGETED_DEVICE_FAMILY = "1,2";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			};
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			name = Debug;
 		};
 		4E2DDAAD2ED6896300125508 /* Release */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = XCBuildConfiguration;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildSettings = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CODE_SIGN_STYLE = Automatic;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				CURRENT_PROJECT_VERSION = 1;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				DEVELOPMENT_TEAM = J5474Z4NGK;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				ENABLE_PREVIEWS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				GENERATE_INFOPLIST_FILE = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UIBackgroundModes = audio;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Lyra needs access to your photo library to set custom cover art for songs and playlists";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				LD_RUNPATH_SEARCH_PATHS = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 					"$(inherited)",
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 					"@executable_path/Frameworks",
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				MARKETING_VERSION = 1.0;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				PRODUCT_BUNDLE_IDENTIFIER = l.Lyra;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				SWIFT_VERSION = 5.0;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				TARGETED_DEVICE_FAMILY = "1,2";
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			};
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		4E2DDA9B2ED6896200125508 /* Build configuration list for PBXProject "Lyra" */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = XCConfigurationList;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildConfigurations = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDAA92ED6896300125508 /* Debug */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDAAA2ED6896300125508 /* Release */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			defaultConfigurationIsVisible = 0;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			defaultConfigurationName = Release;
 		};
 		4E2DDAAB2ED6896300125508 /* Build configuration list for PBXNativeTarget "Lyra" */ = {
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			isa = XCConfigurationList;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			buildConfigurations = (
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDAAC2ED6896300125508 /* Debug */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 				4E2DDAAD2ED6896300125508 /* Release */,
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			);
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			defaultConfigurationIsVisible = 0;
-				549DE8F0A7DC42288D2DE430 /* TimeFormatting.swift in Sources */,
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
