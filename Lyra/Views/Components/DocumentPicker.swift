@@ -36,7 +36,7 @@ struct DocumentPicker: UIViewControllerRepresentable {
             for url in urls {
                 // Start accessing the security-scoped resource
                 guard url.startAccessingSecurityScopedResource() else {
-                    print("Failed to access security scoped resource")
+                    print("Failed to access security scoped resource for file: \(url.lastPathComponent)")
                     continue
                 }
                 

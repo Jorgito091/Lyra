@@ -34,7 +34,7 @@ class AudioPlayerManager: NSObject, ObservableObject {
             try audioSession.setCategory(.playback, mode: .default, options: [])
             try audioSession.setActive(true)
         } catch {
-            print("Failed to setup audio session: \(error)")
+            print("Failed to setup audio session: \(error.localizedDescription). Background playback may not work correctly.")
         }
     }
     
@@ -91,7 +91,7 @@ class AudioPlayerManager: NSObject, ObservableObject {
             play()
             updateNowPlayingInfo()
         } catch {
-            print("Failed to play song: \(error)")
+            print("Failed to play song '\(song.title)' from \(song.fileURL.lastPathComponent): \(error.localizedDescription)")
         }
     }
     

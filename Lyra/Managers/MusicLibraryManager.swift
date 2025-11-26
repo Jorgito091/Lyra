@@ -89,7 +89,7 @@ class MusicLibraryManager: ObservableObject {
             songs.append(song)
             saveData()
         } catch {
-            print("Failed to add song: \(error)")
+            print("Failed to add song from file '\(fileName)': \(error.localizedDescription)")
         }
     }
     

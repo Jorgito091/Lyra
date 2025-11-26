@@ -71,13 +71,13 @@ struct NowPlayingView: View {
                                 .accentColor(.purple)
                                 
                                 HStack {
-                                    Text(formatTime(audioPlayer.currentTime))
+                                    Text(audioPlayer.currentTime.formattedTime())
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                     
                                     Spacer()
                                     
-                                    Text(formatTime(audioPlayer.duration))
+                                    Text(audioPlayer.duration.formattedTime())
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                 }
@@ -126,12 +126,6 @@ struct NowPlayingView: View {
             .navigationTitle("Now Playing")
             .navigationBarTitleDisplayMode(.inline)
         }
-    }
-    
-    private func formatTime(_ time: TimeInterval) -> String {
-        let minutes = Int(time) / 60
-        let seconds = Int(time) % 60
-        return String(format: "%d:%02d", minutes, seconds)
     }
 }
 

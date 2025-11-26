@@ -44,16 +44,10 @@ struct SongRowView: View {
             Spacer()
             
             // Duration
-            Text(formatTime(song.duration))
+            Text(song.duration.formattedTime())
                 .font(.caption)
                 .foregroundColor(.secondary)
         }
         .padding(.vertical, 4)
-    }
-    
-    private func formatTime(_ time: TimeInterval) -> String {
-        let minutes = Int(time) / 60
-        let seconds = Int(time) % 60
-        return String(format: "%d:%02d", minutes, seconds)
     }
 }
