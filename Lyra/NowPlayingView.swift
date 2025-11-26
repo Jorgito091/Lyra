@@ -76,13 +76,13 @@ struct NowPlayingView: View {
                     .tint(.primary.opacity(0.6))
                 
                 HStack {
-                    Text("1:23")
+                    Text("0:00") // TODO: Replace with dynamic current time
                         .font(.system(size: 12))
                         .foregroundColor(.secondary)
                     
                     Spacer()
                     
-                    Text("3:45")
+                    Text("--:--") // TODO: Replace with dynamic song duration
                         .font(.system(size: 12))
                         .foregroundColor(.secondary)
                 }
@@ -92,7 +92,9 @@ struct NowPlayingView: View {
             
             // Playback controls
             HStack(spacing: 48) {
-                Button(action: {}) {
+                Button(action: {
+                    // TODO: Implement previous track functionality
+                }) {
                     Image(systemName: "backward.fill")
                         .font(.system(size: 28))
                         .foregroundColor(.primary)
@@ -106,7 +108,9 @@ struct NowPlayingView: View {
                         .foregroundColor(.primary)
                 }
                 
-                Button(action: {}) {
+                Button(action: {
+                    // TODO: Implement next track functionality
+                }) {
                     Image(systemName: "forward.fill")
                         .font(.system(size: 28))
                         .foregroundColor(.primary)
