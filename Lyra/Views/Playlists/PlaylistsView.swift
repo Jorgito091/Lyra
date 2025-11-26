@@ -25,7 +25,7 @@ struct PlaylistsView: View {
                             showingCreateSheet = true
                         }
                         .buttonStyle(.borderedProminent)
-                        .tint(.purple)
+                        .tint(.gray)
                     }
                 } else {
                     List {

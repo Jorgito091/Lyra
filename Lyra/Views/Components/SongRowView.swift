@@ -21,11 +21,11 @@ struct SongRowView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 8))
             } else {
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.purple.opacity(0.3))
+                    .fill(Color.gray.opacity(0.3))
                     .frame(width: 50, height: 50)
                     .overlay(
                         Image(systemName: "music.note")
-                            .foregroundColor(.purple)
+                            .foregroundColor(.gray)
                     )
             }
             

@@ -36,7 +36,7 @@ struct AddSongsToPlaylistView: View {
                             
                             if selectedSongs.contains(song.id) {
                                 Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(.purple)
+                                    .foregroundColor(.gray)
                             } else {
                                 Image(systemName: "circle")
                                     .foregroundColor(.gray)

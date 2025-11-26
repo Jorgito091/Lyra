@@ -28,7 +28,7 @@ struct NowPlayingView: View {
                                 RoundedRectangle(cornerRadius: 20)
                                     .fill(
                                         LinearGradient(
-                                            colors: [.purple, .blue],
+                                            colors: [.gray.opacity(0.6), .black],
                                             startPoint: .topLeading,
                                             endPoint: .bottomTrailing
                                         )
@@ -37,7 +37,7 @@ struct NowPlayingView: View {
                                     .overlay(
                                         Image(systemName: "music.note")
                                             .font(.system(size: 100))
-                                            .foregroundColor(.white.opacity(0.7))
+                                            .foregroundColor(.white.opacity(0.5))
                                     )
                                     .shadow(radius: 10)
                             }
@@ -68,7 +68,7 @@ struct NowPlayingView: View {
                                     ),
                                     in: 0...max(audioPlayer.duration, 0.1)
                                 )
-                                .accentColor(.purple)
+                                .accentColor(.gray)
                                 
                                 HStack {
                                     Text(audioPlayer.currentTime.formattedTime())
@@ -99,7 +99,7 @@ struct NowPlayingView: View {
                                 } label: {
                                     Image(systemName: audioPlayer.isPlaying ? "pause.circle.fill" : "play.circle.fill")
                                         .font(.system(size: 72))
-                                        .foregroundColor(.purple)
+                                        .foregroundColor(.primary)
                                 }
                                 
                                 Button {

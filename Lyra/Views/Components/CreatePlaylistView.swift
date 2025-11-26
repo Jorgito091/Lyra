@@ -31,12 +31,12 @@ struct CreatePlaylistView: View {
                                     .clipShape(RoundedRectangle(cornerRadius: 12))
                             } else {
                                 RoundedRectangle(cornerRadius: 12)
-                                    .fill(Color.purple.opacity(0.3))
+                                    .fill(Color.gray.opacity(0.3))
                                     .frame(width: 180, height: 180)
                                     .overlay(
                                         Image(systemName: "music.note.list")
                                             .font(.system(size: 60))
-                                            .foregroundColor(.purple)
+                                            .foregroundColor(.gray)
                                     )
                             }
                             
@@ -44,7 +44,7 @@ struct CreatePlaylistView: View {
                                 Label("Choose Image", systemImage: "photo")
                             }
                             .buttonStyle(.bordered)
-                            .tint(.purple)
+                            .tint(.gray)
                         }
                         Spacer()
                     }

@@ -40,7 +40,7 @@ struct LibraryView: View {
                             showingFilePicker = true
                         }
                         .buttonStyle(.borderedProminent)
-                        .tint(.purple)
+                        .tint(.gray)
                     }
                 } else {
                     List {

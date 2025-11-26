@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MiniPlayerView: View {
     @StateObject private var audioPlayer = AudioPlayerManager.shared
+    var onTap: (() -> Void)?
     
     var body: some View {
         if let song = audioPlayer.currentSong {
@@ -22,11 +23,11 @@ struct MiniPlayerView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 6))
                 } else {
                     RoundedRectangle(cornerRadius: 6)
-                        .fill(Color.purple.opacity(0.3))
+                        .fill(Color.gray.opacity(0.3))
                         .frame(width: 45, height: 45)
                         .overlay(
                             Image(systemName: "music.note")
-                                .foregroundColor(.purple)
+                                .foregroundColor(.gray)
                                 .font(.caption)
                         )
                 }
@@ -35,11 +36,12 @@ struct MiniPlayerView: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(song.title)
                         .font(.subheadline)
+                        .foregroundColor(.white)
                         .lineLimit(1)
                     
                     Text(song.artist)
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.gray)
                         .lineLimit(1)
                 }
                 
@@ -51,7 +53,7 @@ struct MiniPlayerView: View {
                 } label: {
                     Image(systemName: audioPlayer.isPlaying ? "pause.fill" : "play.fill")
                         .font(.title3)
-                        .foregroundColor(.purple)
+                        .foregroundColor(.white)
                 }
                 
                 // Next button
@@ -60,17 +62,21 @@ struct MiniPlayerView: View {
                 } label: {
                     Image(systemName: "forward.fill")
                         .font(.body)
-                        .foregroundColor(.primary)
+                        .foregroundColor(.gray)
                 }
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
             .background(
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(Color(uiColor: .systemBackground))
-                    .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: -5)
+                    .fill(Color.black.opacity(0.95))
+                    .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: -5)
             )
             .padding(.horizontal)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                onTap?()
+            }
         }
     }
 }
