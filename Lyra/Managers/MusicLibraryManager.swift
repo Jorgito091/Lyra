@@ -186,13 +186,39 @@ class MusicLibraryManager: ObservableObject {
         // Load songs
         if let data = UserDefaults.standard.data(forKey: songsKey),
            let decoded = try? JSONDecoder().decode([Song].self, from: data) {
-            songs = decoded
+            // Validate that song files still exist
+            songs = decoded.filter { song in
+                FileManager.default.fileExists(atPath: song.fileURL.path)
+            }
+            
+            // If any songs were filtered out, save the cleaned data
+            if songs.count != decoded.count {
+                print("Removed \(decoded.count - songs.count) songs with missing files")
+                saveData()
+            }
         }
         
         // Load playlists
         if let data = UserDefaults.standard.data(forKey: playlistsKey),
            let decoded = try? JSONDecoder().decode([Playlist].self, from: data) {
             playlists = decoded
+            
+            // Clean up any song references that no longer exist
+            var playlistsModified = false
+            for i in 0..<playlists.count {
+                let originalCount = playlists[i].songIDs.count
+                playlists[i].songIDs = playlists[i].songIDs.filter { songID in
+                    songs.contains(where: { $0.id == songID })
+                }
+                if playlists[i].songIDs.count != originalCount {
+                    playlistsModified = true
+                }
+            }
+            
+            if playlistsModified {
+                print("Cleaned up playlist references to missing songs")
+                saveData()
+            }
         }
     }
 }

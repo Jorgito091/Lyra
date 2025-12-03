@@ -84,8 +84,39 @@ struct NowPlayingView: View {
                             }
                             .padding(.horizontal, 32)
                             
+                            // Volume control
+                            VStack(spacing: 8) {
+                                HStack {
+                                    Image(systemName: "speaker.fill")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                    
+                                    Slider(
+                                        value: Binding(
+                                            get: { audioPlayer.volume },
+                                            set: { audioPlayer.setVolume($0) }
+                                        ),
+                                        in: 0...1
+                                    )
+                                    .accentColor(.gray)
+                                    
+                                    Image(systemName: "speaker.wave.3.fill")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                }
+                            }
+                            .padding(.horizontal, 32)
+                            
                             // Playback controls
                             HStack(spacing: 40) {
+                                Button {
+                                    audioPlayer.toggleShuffle()
+                                } label: {
+                                    Image(systemName: audioPlayer.isShuffleEnabled ? "shuffle.circle.fill" : "shuffle")
+                                        .font(.system(size: 32))
+                                        .foregroundColor(audioPlayer.isShuffleEnabled ? .accentColor : .primary)
+                                }
+                                
                                 Button {
                                     audioPlayer.playPrevious()
                                 } label: {
@@ -109,6 +140,11 @@ struct NowPlayingView: View {
                                         .font(.system(size: 32))
                                         .foregroundColor(.primary)
                                 }
+                                
+                                // Placeholder for visual balance (repeat could go here in future)
+                                Image(systemName: "repeat")
+                                    .font(.system(size: 32))
+                                    .foregroundColor(.secondary.opacity(0.3))
                             }
                             .padding(.horizontal)
                         }

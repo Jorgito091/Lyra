@@ -19,9 +19,12 @@ class AudioPlayerManager: NSObject, ObservableObject {
     @Published var duration: TimeInterval = 0
     @Published var playbackQueue: [Song] = []
     @Published var currentIndex: Int = 0
+    @Published var volume: Float = 1.0
+    @Published var isShuffleEnabled = false
     
     private var player: AVAudioPlayer?
     private var timer: Timer?
+    private var originalQueue: [Song] = []
     
     override private init() {
         super.init()
@@ -113,12 +116,15 @@ class AudioPlayerManager: NSObject, ObservableObject {
             player = try AVAudioPlayer(contentsOf: song.fileURL)
             player?.delegate = self
             player?.prepareToPlay()
+            player?.volume = volume
             
             currentSong = song
             duration = player?.duration ?? 0
+            currentTime = 0  // Reset current time when playing a new song
             
             if !queue.isEmpty {
                 playbackQueue = queue
+                originalQueue = queue  // Save original order for shuffle toggle
                 if let index = queue.firstIndex(where: { $0.id == song.id }) {
                     currentIndex = index
                 }
@@ -169,7 +175,20 @@ class AudioPlayerManager: NSObject, ObservableObject {
     
     func playNext() {
         guard !playbackQueue.isEmpty else { return }
-        currentIndex = (currentIndex + 1) % playbackQueue.count
+        
+        if isShuffleEnabled {
+            // Pick a random song different from current
+            var nextIndex = currentIndex
+            if playbackQueue.count > 1 {
+                repeat {
+                    nextIndex = Int.random(in: 0..<playbackQueue.count)
+                } while nextIndex == currentIndex
+            }
+            currentIndex = nextIndex
+        } else {
+            currentIndex = (currentIndex + 1) % playbackQueue.count
+        }
+        
         playSong(playbackQueue[currentIndex], from: playbackQueue)
     }
     
@@ -214,6 +233,40 @@ class AudioPlayerManager: NSObject, ObservableObject {
         }
         
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
+    }
+    
+    func setVolume(_ newVolume: Float) {
+        volume = max(0.0, min(1.0, newVolume))
+        player?.volume = volume
+    }
+    
+    func toggleShuffle() {
+        isShuffleEnabled.toggle()
+        
+        if isShuffleEnabled && !playbackQueue.isEmpty {
+            // Save current song
+            let currentSong = playbackQueue[currentIndex]
+            
+            // Shuffle the queue
+            var shuffled = playbackQueue
+            shuffled.shuffle()
+            
+            // Make sure current song is at current index
+            if let newIndex = shuffled.firstIndex(where: { $0.id == currentSong.id }) {
+                shuffled.swapAt(currentIndex, newIndex)
+            }
+            
+            playbackQueue = shuffled
+        } else if !isShuffleEnabled && !originalQueue.isEmpty {
+            // Restore original order
+            let currentSong = playbackQueue[currentIndex]
+            playbackQueue = originalQueue
+            
+            // Update current index to match the song in original queue
+            if let originalIndex = originalQueue.firstIndex(where: { $0.id == currentSong.id }) {
+                currentIndex = originalIndex
+            }
+        }
     }
     
     func stop() {
