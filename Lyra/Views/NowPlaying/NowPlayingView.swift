@@ -141,10 +141,9 @@ struct NowPlayingView: View {
                                         .foregroundColor(.primary)
                                 }
                                 
-                                // Placeholder for visual balance (repeat could go here in future)
-                                Image(systemName: "repeat")
-                                    .font(.system(size: 32))
-                                    .foregroundColor(.secondary.opacity(0.3))
+                                // Spacer for visual balance
+                                Color.clear
+                                    .frame(width: 32, height: 32)
                             }
                             .padding(.horizontal)
                         }

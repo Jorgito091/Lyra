@@ -178,13 +178,11 @@ class AudioPlayerManager: NSObject, ObservableObject {
         
         if isShuffleEnabled {
             // Pick a random song different from current
-            var nextIndex = currentIndex
             if playbackQueue.count > 1 {
-                repeat {
-                    nextIndex = Int.random(in: 0..<playbackQueue.count)
-                } while nextIndex == currentIndex
+                let candidates = playbackQueue.indices.filter { $0 != currentIndex }
+                currentIndex = candidates.randomElement() ?? currentIndex
             }
-            currentIndex = nextIndex
+            // If only one song, stay on current
         } else {
             currentIndex = (currentIndex + 1) % playbackQueue.count
         }
@@ -244,26 +242,26 @@ class AudioPlayerManager: NSObject, ObservableObject {
         isShuffleEnabled.toggle()
         
         if isShuffleEnabled && !playbackQueue.isEmpty {
-            // Save current song
-            let currentSong = playbackQueue[currentIndex]
+            // Save current song being played
+            let currentlyPlayingSong = playbackQueue[currentIndex]
             
             // Shuffle the queue
             var shuffled = playbackQueue
             shuffled.shuffle()
             
             // Make sure current song is at current index
-            if let newIndex = shuffled.firstIndex(where: { $0.id == currentSong.id }) {
+            if let newIndex = shuffled.firstIndex(where: { $0.id == currentlyPlayingSong.id }) {
                 shuffled.swapAt(currentIndex, newIndex)
             }
             
             playbackQueue = shuffled
         } else if !isShuffleEnabled && !originalQueue.isEmpty {
             // Restore original order
-            let currentSong = playbackQueue[currentIndex]
+            let currentlyPlayingSong = playbackQueue[currentIndex]
             playbackQueue = originalQueue
             
             // Update current index to match the song in original queue
-            if let originalIndex = originalQueue.firstIndex(where: { $0.id == currentSong.id }) {
+            if let originalIndex = originalQueue.firstIndex(where: { $0.id == currentlyPlayingSong.id }) {
                 currentIndex = originalIndex
             }
         }
