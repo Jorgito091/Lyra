@@ -24,6 +24,8 @@ A full-featured music player application for iOS with background playback, playl
 - Lock screen controls with album art
 - Play/pause, skip forward/backward
 - Seek through tracks
+- Volume control with visual slider
+- Shuffle mode for random playback
 - Mini player for quick controls
 - Continuous playback through playlists
 
@@ -92,11 +94,22 @@ You can add custom cover art to both individual songs and playlists:
 - Select an image from your Photos library
 - The cover will be displayed throughout the app
 
+### Volume Control
+- Adjust playback volume using the slider in Now Playing view
+- Volume settings are maintained across songs
+- Visual feedback with speaker icons
+
+### Shuffle Mode
+- Enable shuffle to play songs in random order
+- Toggle shuffle on/off with the shuffle button
+- Maintains current song when enabling/disabling shuffle
+- Original playback order is restored when shuffle is disabled
+
 ## Future Enhancements
 - iCloud sync
 - Equalizer
 - Lyrics support
 - Smart playlists
-- Shuffle and repeat modes
+- Repeat modes (one/all)
 - Queue management
 - Sharing playlists
